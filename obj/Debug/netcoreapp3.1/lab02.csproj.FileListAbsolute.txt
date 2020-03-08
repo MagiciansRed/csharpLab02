@@ -1,0 +1,11 @@
+/home/piotr/Documents/zut/semestr6/csharp/lab02/bin/Debug/netcoreapp3.1/lab02
+/home/piotr/Documents/zut/semestr6/csharp/lab02/bin/Debug/netcoreapp3.1/lab02.deps.json
+/home/piotr/Documents/zut/semestr6/csharp/lab02/bin/Debug/netcoreapp3.1/lab02.runtimeconfig.json
+/home/piotr/Documents/zut/semestr6/csharp/lab02/bin/Debug/netcoreapp3.1/lab02.runtimeconfig.dev.json
+/home/piotr/Documents/zut/semestr6/csharp/lab02/bin/Debug/netcoreapp3.1/lab02.dll
+/home/piotr/Documents/zut/semestr6/csharp/lab02/bin/Debug/netcoreapp3.1/lab02.pdb
+/home/piotr/Documents/zut/semestr6/csharp/lab02/obj/Debug/netcoreapp3.1/lab02.csprojAssemblyReference.cache
+/home/piotr/Documents/zut/semestr6/csharp/lab02/obj/Debug/netcoreapp3.1/lab02.AssemblyInfoInputs.cache
+/home/piotr/Documents/zut/semestr6/csharp/lab02/obj/Debug/netcoreapp3.1/lab02.AssemblyInfo.cs
+/home/piotr/Documents/zut/semestr6/csharp/lab02/obj/Debug/netcoreapp3.1/lab02.dll
+/home/piotr/Documents/zut/semestr6/csharp/lab02/obj/Debug/netcoreapp3.1/lab02.pdb
