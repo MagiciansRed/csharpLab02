@@ -11,16 +11,11 @@ namespace lab02
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-            TcpListener listener = new TcpListener(1302);
-            listener.Start();
+        
+        private static void ProcessClientRequestst(object argument){
 
-            while (true)
-            {
-                Console.WriteLine("Waiting for a connetion");
-                TcpClient client = listener.AcceptTcpClient();
-                StreamReader sr = new StreamReader(client.GetStream());
+            TcpClient client = (TcpClient)argument;
+            StreamReader sr = new StreamReader(client.GetStream());
                 StreamWriter sw = new StreamWriter(client.GetStream());
                 try
                 {
@@ -52,6 +47,21 @@ namespace lab02
                     sw.Flush();
                 }
                 client.Close();
+
+        }
+        static void Main(string[] args)
+        {
+            TcpListener listener = new TcpListener(8000);
+            listener.Start();
+            Console.WriteLine("server started...");
+
+            while (true)
+            {
+                Console.WriteLine("Waiting for a connetion...");
+                TcpClient client = listener.AcceptTcpClient();
+                Console.WriteLine("Accepted new client connection...");
+                Thread t = new Thread(ProcessClientRequestst);
+                t.Start(client);
             }
         }
     }
