@@ -51,6 +51,7 @@ namespace lab02
         }
         static void Main(string[] args)
         {
+            try{
             TcpListener listener = new TcpListener(8000);
             listener.Start();
             Console.WriteLine("server started...");
@@ -63,6 +64,10 @@ namespace lab02
                 Thread t = new Thread(ProcessClientRequestst);
                 t.Start(client);
             }
+            }
+            catch(Exception e){
+                Console.WriteLine(e);
+            } 
         }
     }
 }
