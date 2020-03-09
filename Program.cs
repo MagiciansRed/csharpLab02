@@ -13,7 +13,7 @@ namespace lab02
     {
         static void Main(string[] args)
         {
-            TcpListener listener = new TcpListener(1302);
+            TcpListener listener = new TcpListener(8000);
             listener.Start();
 
             while (true)
@@ -29,9 +29,18 @@ namespace lab02
                     Console.WriteLine(request);
                     string[] tokens = request.Split(' ');
                     string page = tokens[1];
-                    if(page == "/"){
-                        page = "/index.html";
-                    }
+
+                    // choosing random test table created form lab01
+                    List<string> testTables = new List<string>(){
+                        "tab1.html",
+                        "tab2.html",
+                        "tab3.html",
+                        "tab4.html",
+                    };
+                    Random rnd = new Random();
+                    int r = rnd.Next(testTables.Count);
+
+                    page = "/" + ((string)testTables[r]);
 
                     // Find the file
                     StreamReader file = new StreamReader("./" + page);
