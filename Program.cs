@@ -13,7 +13,17 @@ namespace lab02
     {
         static void Main(string[] args)
         {
-            TcpListener listener = new TcpListener(8000);
+            int port = 8000;
+            try{
+            if(args.Length != 0){
+                port = Int32.Parse(args[0]);
+            }
+            }catch(FormatException){
+                Console.WriteLine(String.Format("Unable to parse {0}",args[0]));
+            }
+
+            Console.WriteLine(String.Format("Running on port {0}",port));
+            TcpListener listener = new TcpListener(port);
             listener.Start();
 
             while (true)
