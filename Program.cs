@@ -19,8 +19,9 @@ namespace lab02
                 port = Int32.Parse(args[0]);
             }
             }catch(FormatException){
-                Console.WriteLine($"Unable to parse {0}", args[0]);
+                Console.WriteLine(String.Format("Unable to parse {0}",args[0]));
             }
+            Console.WriteLine(String.Format("Running on port {0}",port));
             
             TcpListener listener = new TcpListener(port);
             listener.Start();
